@@ -22,6 +22,9 @@ function Home() {
           Ver ropa
         </Link>
       </section>
+      <section>
+        <h2>Lo más nuevo</h2>
+      </section>
     </main>
   );
 }
