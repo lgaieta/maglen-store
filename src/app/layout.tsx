@@ -6,9 +6,9 @@ function Layout(props: { children: ReactNode }) {
   return (
     <html>
       <body className="flex flex-col w-full bg-white text-gray-900">
-        <header className="flex justify-between w-full py-4 px-4 md:px-64 border-b border-b-gray-200">
+        <header className="sticky top-0 left-0 flex justify-between bg-white w-full py-4 px-4 md:px-section-sides border-b border-b-gray-200">
           <Link className="font-bold" href="/">
-            MAGLEN
+            MAGLEN STORE
           </Link>
         </header>
         {props.children}
