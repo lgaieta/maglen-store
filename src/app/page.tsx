@@ -1,6 +1,4 @@
 import { ButtonLink } from "@/components/Button";
-import Image from "next/image";
-import Link from "next/link";
 
 export const metadata = {
   title: "Inicio - MAGLEN STORE",
@@ -26,6 +24,21 @@ function Home() {
             Ver ropa
           </ButtonLink>
         </div>
+      </section>
+      <section className="flex flex-col px-4 pt-8 md:px-section-sides">
+        <h2 className="text-3xl font-bold w-full border-t border-t-gray-200 pt-12">
+          Lo más nuevo
+        </h2>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+          <li className="flex flex-col justify-end w-full bg-gray-900 aspect-[16/9] p-4 rounded-2xl">
+            <p className="text-2xl text-white">Ropa 1</p>
+            <p className="text-lg text-white">4500$</p>
+          </li>
+          <li className="flex flex-col justify-end w-full bg-gray-900 aspect-[16/9] p-4 rounded-2xl">
+            <p className="text-2xl text-white">Ropa 1</p>
+            <p className="text-lg text-white">4500$</p>
+          </li>
+        </ul>
       </section>
     </main>
   );
