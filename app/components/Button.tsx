@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const buttonStyles =
-  "px-8 py-3 text-md font-bold rounded-full transition-colors bg-gray-900 text-white hover:bg-gray-700";
+  "px-8 py-3 text-md font-bold rounded-full transition-colors bg-accent text-textAccent hover:bg-pink-900";
 
 type ButtonProps<Element extends React.ElementType<any>> = {
   children: React.ReactNode;
