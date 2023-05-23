@@ -1,5 +1,5 @@
 function SocialProofSection() {
-  return <div>a</div>;
+    return <div>a</div>;
 }
 
 export default SocialProofSection;
