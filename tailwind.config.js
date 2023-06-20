@@ -1,17 +1,14 @@
-const colors = require('tailwindcss/colors');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
             colors: {
-                primary: colors.blue[900],
-                primaryLight: colors.blue[600],
-                secondary: colors.white,
-                border: colors.blue[200],
-                accent: colors.red[500],
-                textAccent: colors.white,
+                text: '#2E2E2E',
+                'text-dark': '#101010',
+                border: '#EAEAEA',
+                background: '#FFFFFF',
+                'background-dark': '#F8F8F8',
             },
             spacing: {
                 'section-sides': '10rem',

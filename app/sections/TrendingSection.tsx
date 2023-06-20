@@ -7,8 +7,15 @@ function TrendingSection() {
                 Lo más nuevo
             </h2>
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-8 my-8'>
-                <li className='relative flex flex-col justify-end w-full p-4 rounded-2xl'>
-                    <Image src='/fashion.jpg' alt='Fashion' fill />
+                <li className='relative flex flex-col justify-end w-full p-4 rounded-2xl border border-primaryLight'>
+                    <div className='relative w-full'>
+                        <Image
+                            src='/fashion.jpg'
+                            alt='Fashion'
+                            fill
+                            className='w-full'
+                        />
+                    </div>
                     <p className='text-2xl text-primary'>Ropa 1</p>
                     <p className='text-lg text-primary'>4500$</p>
                 </li>
