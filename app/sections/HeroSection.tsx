@@ -1,9 +1,11 @@
 import { ButtonLink } from '@/components/Button';
+import Carousel from '@/components/Carousel';
 
 function HeroSection() {
     return (
-        <section className='flex flex-col px-6 py-8'>
+        <section className='flex flex-col px-6'>
             <div className='flex flex-col items-center justify-center gap-6'>
+                <Carousel />
                 <h1 className='text-[52px] text-center font-bold leading-none text-text-dark'>
                     Elegí tu ropa preferida
                 </h1>
