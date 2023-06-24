@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import '@/global.css';
+import '@splidejs/react-splide/css';
 import Link from 'next/link';
 import { MdMoreVert } from 'react-icons/md';
 import { Poppins } from 'next/font/google';
