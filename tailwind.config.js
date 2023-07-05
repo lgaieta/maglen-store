@@ -11,7 +11,7 @@ module.exports = {
                 'background-dark': '#F8F8F8',
             },
             spacing: {
-                'section-sides': '10rem',
+                'limit-content': '56.25rem',
             },
         },
     },

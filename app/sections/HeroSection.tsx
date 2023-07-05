@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function HeroSection() {
     return (
-        <section className='flex flex-col sm:flex-row-reverse items-center justify-center max-w-[900px] w-full gap-6 px-6'>
+        <section className='flex flex-col sm:flex-row-reverse items-center justify-center max-w-[900px] w-full gap-6 mx-4'>
             <div className="flex items-center justify-center w-full">
                 <Carousel />
             </div>

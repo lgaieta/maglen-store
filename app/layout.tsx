@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 import '@/global.css';
-import Link from 'next/link';
-import { MdMoreVert } from 'react-icons/md';
 import { Poppins } from 'next/font/google';
+import Header from '@/components/Header';
 
 const poppins = Poppins({
     weight: ['400', '500', '700'],
@@ -19,12 +18,7 @@ function Layout(props: { children: ReactNode }) {
                     poppins.className
                 }
             >
-                <header className='flex justify-between items-center w-full p-4 border-border border-b text-text'>
-                    <Link className='font-medium' href='/'>
-                        Maglen store
-                    </Link>
-                    <MdMoreVert size={24} />
-                </header>
+                <Header />
                 {props.children}
             </body>
         </html>
