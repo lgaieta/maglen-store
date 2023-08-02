@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 
 const poppins = Poppins({
     weight: ['400', '500', '700'],
-    display: 'swap',
+    display: 'auto',
     subsets: ['latin'],
 });
 

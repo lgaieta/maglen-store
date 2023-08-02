@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 function SocialProofSection() {
     return (
-        <section className='flex flex-col items-start justify-center max-w-[900px] w-full gap-6 px-4 py-8 lg:px-0 mt-8 border-t border-t-border'>
+        <section className='flex flex-col items-start justify-center max-w-[350px] sm:max-w-[575px] md:max-w-[700px] lg:max-w-[900px] w-full gap-6 px-4 xs:px-8 py-8 lg:px-0 mt-8 border-t border-t-border'>
             <h2 className='text-3xl font-bold text-text-dark'>
                 Nuestros clientes
             </h2>
-            <ul className='flex min-w-full gap-4 pt-8'>
+            <ul className='flex flex-col sm:flex-row min-w-full gap-12 sm:gap-4 pt-8'>
                 <Review
                     content='Lorem ipsum, dolor sit amet consectetur adipisicing. Magnam soluta ipsam sequi. Et magni doloribus'
                     author='Anonymous'
