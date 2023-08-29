@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import '@/global.css';
 import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
+import Footer from './components/Footer';
 
 const poppins = Poppins({
     weight: ['400', '500', '700'],
@@ -20,6 +21,7 @@ function Layout(props: { children: ReactNode }) {
             >
                 <Header />
                 {props.children}
+                <Footer />
             </body>
         </html>
     );
