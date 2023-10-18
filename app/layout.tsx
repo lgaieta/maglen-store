@@ -15,7 +15,7 @@ function Layout(props: { children: ReactNode }) {
         <html lang='es'>
             <body
                 className={
-                    'flex flex-col w-full gap-8 items-center text-text ' +
+                    'flex flex-col w-full items-center text-text ' +
                     poppins.className
                 }
             >

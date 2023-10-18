@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
 const buttonStyles =
-    'px-4 py-3 leading-none font-bold rounded-lg transition-colors bg-text-dark text-background hover:bg-text';
+    'flex items-center justify-center px-6 py-4 leading-none font-bold rounded-xl transition-colors bg-text-dark hover:bg-text';
 
 type ButtonProps<Element extends React.ElementType<any>> = {
     children: React.ReactNode;
@@ -24,7 +24,7 @@ export function ButtonLink({
     ...rest
 }: ButtonProps<'a'> & React.ComponentPropsWithoutRef<typeof Link>) {
     return (
-        <Link className={`${buttonStyles} ${className}`} {...rest}>
+        <Link className={twMerge(buttonStyles, className)} {...rest}>
             {children}
         </Link>
     );
