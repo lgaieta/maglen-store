@@ -8,7 +8,7 @@ export const metadata = {
 
 function Home() {
     return (
-        <main className='w-full h-full flex flex-col items-center pt-8  bg-background text-text'>
+        <main className='w-full h-full flex flex-col items-center pt-14 bg-background text-text'>
             <HeroSection />
             <SocialProofSection />
             <ProductSection />

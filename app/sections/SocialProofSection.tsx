@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function SocialProofSection() {
     return (
-        <section className='flex flex-col items-start justify-center max-w-[350px] sm:max-w-[575px] md:max-w-[700px] lg:max-w-[900px] w-full gap-6 px-4 xs:px-8 py-14 lg:px-0 mt-8 border-t border-t-border'>
+        <section className='flex flex-col items-start justify-center section-width-limits w-full gap-6 px-4 xs:px-8 py-14 lg:px-0 mt-14 border-t border-t-border'>
             <h2 className='text-3xl font-bold text-text-dark'>
                 Nuestros clientes
             </h2>

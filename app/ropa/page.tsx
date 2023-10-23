@@ -49,7 +49,7 @@ const data = [
 
 async function ProductsPage() {
     return (
-        <main className='flex flex-col md:px-0 pb-8 px-4 max-w-[360px] w-full sm:max-w-[600px] md:max-w-[650px] lg:max-w-[900px]'>
+        <main className='flex flex-col md:px-0 pb-8 px-4 max-w-[360px] w-full sm:max-w-[600px] md:max-w-[650px] lg:max-w-section'>
             <h1 className='text-4xl font-bold md:py-12 py-8 text-center'>
                 Nuestros productos
             </h1>
