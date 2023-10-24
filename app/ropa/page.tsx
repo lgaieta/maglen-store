@@ -49,24 +49,26 @@ const data = [
 
 async function ProductsPage() {
     return (
-        <main className='flex flex-col md:px-0 pb-8 px-4 max-w-[360px] w-full sm:max-w-[600px] md:max-w-[650px] lg:max-w-section'>
-            <h1 className='text-4xl font-bold md:py-12 py-8 text-center'>
+        <main className='flex flex-col items-center md:px-0 pb-8 bg-background text-text w-full'>
+            <h1 className='text-4xl font-bold md:py-12 py-8 text-center text-text-highlight'>
                 Nuestros productos
             </h1>
-            <ul className='grid grid-cols-1 sm:grid-cols-2 md:w-full gap-10 lg:grid-cols-3'>
+            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 section-width-limits w-full gap-10'>
                 {data.map(product => (
                     <li
                         key={product.title}
                         className='flex flex-col items-center justify-center gap-1'
                     >
-                        <div className='relative w-full aspect-square rounded-xl bg-gray-400'>
+                        <div className='relative w-full aspect-square rounded-xl bg-background-dark border border-border'>
                             <Image
                                 src={product.image}
                                 alt={product.title}
                                 fill
                             />
                         </div>
-                        <p className='text-xl font-bold'>{product.title}</p>
+                        <p className='text-xl font-bold mt-1'>
+                            {product.title}
+                        </p>
                         <p className='text-xl'>{product.price}</p>
                     </li>
                 ))}

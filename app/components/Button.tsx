@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
 const buttonStyles =
-    'flex items-center justify-center px-6 py-4 leading-none font-bold rounded-xl transition-colors hover:bg-text';
+    'flex items-center justify-center px-6 py-4 leading-none font-bold rounded-xl transition-colors';
 
 type ButtonProps<Element extends React.ElementType<any>> = {
     children: React.ReactNode;
