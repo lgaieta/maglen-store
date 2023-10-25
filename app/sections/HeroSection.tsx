@@ -1,6 +1,5 @@
 import { ButtonLink } from '@/components/Button';
 import Carousel from '@/components/Carousel';
-import Image from 'next/image';
 
 function HeroSection() {
     return (
@@ -15,8 +14,8 @@ function HeroSection() {
                 <p className='text-center sm:text-left text-text-secondary'>
                     Te ofrecemos ropa buena, bonita y barata.
                 </p>
-                <ButtonLink href='#' className='cta-gradient'>
-                    COMPRAR
+                <ButtonLink href='/ropa' className='cta-gradient'>
+                    Ver ropa
                 </ButtonLink>
             </div>
         </section>
