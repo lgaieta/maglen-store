@@ -1,6 +1,5 @@
-'use client';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import mysql2 from 'mysql2/promise';
 
 type Product = {
     id: number;
@@ -9,14 +8,17 @@ type Product = {
     image: string;
 };
 
-function ProductsList() {
-    const [products, setProducts] = useState<Product[] | null>(null);
+const pool = mysql2.createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+});
 
-    useEffect(() => {
-        fetch('/ropa/api')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, []);
+async function ProductsList() {
+    const products = (
+        await pool.query('select * from product')
+    )[0] as Product[];
 
     return (
         <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 section-width-limits w-full gap-10'>

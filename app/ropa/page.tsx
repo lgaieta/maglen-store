@@ -1,4 +1,5 @@
-import ProductsList from './ProductsList';
+import { Suspense } from 'react';
+import ProductsList from '../components/ProductsList';
 
 export const metadata = {
     title: 'Nuestra ropa - MAGLEN STORE',
@@ -10,7 +11,9 @@ async function ProductsPage() {
             <h1 className='text-4xl font-bold md:py-12 py-8 text-center text-text-highlight'>
                 Nuestros productos
             </h1>
-            <ProductsList />
+            <Suspense fallback={'Cargando...'}>
+                <ProductsList />
+            </Suspense>
         </main>
     );
 }
