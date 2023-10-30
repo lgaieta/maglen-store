@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import ProductsList from '../components/ProductsList';
+import { Spinner } from '@nextui-org/spinner';
 
 export const metadata = {
     title: 'Nuestra ropa - MAGLEN STORE',
@@ -11,7 +12,7 @@ async function ProductsPage() {
             <h1 className='text-4xl font-bold md:py-12 py-8 text-center text-text-highlight'>
                 Nuestros productos
             </h1>
-            <Suspense fallback={'Cargando...'}>
+            <Suspense fallback={<Spinner />}>
                 <ProductsList />
             </Suspense>
         </main>

@@ -11,18 +11,23 @@ function ProductSection() {
                     Imagen
                 </div>
                 <div className='flex flex-col w-full gap-1 sm:justify-evenly'>
-                    <p className='font-bold md:text-2xl'>
+                    <p className='font-bold md:text-2xl text-foreground-700'>
                         Pantalón vaquero B&L
                     </p>
-                    <p className='text-xl font-bold md:text-3xl'>9500$</p>
+                    <p className='text-xl font-bold md:text-3xl text-foreground-900'>
+                        9500$
+                    </p>
                     <div className=''>
-                        <p className='text-sm md:text-md'>Talles</p>
+                        <p className='text-sm md:text-md text-foreground-600'>
+                            Talles
+                        </p>
                         <p className='text-sm'>S M L XL XXL</p>
                     </div>
                     <Button
                         className='cta-gradient'
                         color='primary'
                         variant='shadow'
+                        size='lg'
                     >
                         COMPRAR
                     </Button>

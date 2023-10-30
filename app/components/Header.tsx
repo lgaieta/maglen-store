@@ -24,11 +24,11 @@ function Header() {
                 <NavbarItem>
                     <Button
                         as={NextLink}
-                        href='#'
+                        href='/subir-ropa'
                         color='primary'
                         variant='flat'
                     >
-                        Crear producto
+                        Subir ropa
                     </Button>
                 </NavbarItem>
             </NavbarContent>

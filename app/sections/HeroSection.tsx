@@ -12,7 +12,7 @@ function HeroSection() {
                 <h1 className='text-[52px] text-center sm:text-left font-bold leading-tight'>
                     Elegí tu ropa preferida
                 </h1>
-                <p className='text-center sm:text-left'>
+                <p className='text-center sm:text-left text-foreground-600'>
                     Te ofrecemos ropa buena, bonita y barata.
                 </p>
                 <Button
