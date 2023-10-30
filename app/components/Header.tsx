@@ -1,16 +1,38 @@
-import Link from 'next/link';
-import { MdMoreVert } from 'react-icons/md';
+import NextLink from 'next/link';
+import {
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+} from '@nextui-org/navbar';
+import { Button } from '@nextui-org/button';
 
 function Header() {
     return (
-        <header className='flex sticky top-0 left-0 z-50 justify-center items-center w-full p-4 border-border border-b text-text bg-background/95 backdrop-blur'>
-            <div className='flex justify-between items-center w-full max-w-section'>
-                <Link className='font-medium text-text' href='/'>
+        <Navbar
+            classNames={{
+                base: 'w-full',
+                wrapper: 'w-full section-width-limits',
+            }}
+        >
+            <NavbarBrand>
+                <NextLink href='/' className='font-bold text-inherit'>
                     Maglen store
-                </Link>
-                <MdMoreVert size={24} />
-            </div>
-        </header>
+                </NextLink>
+            </NavbarBrand>
+            <NavbarContent justify='end'>
+                <NavbarItem>
+                    <Button
+                        as={NextLink}
+                        href='#'
+                        color='primary'
+                        variant='flat'
+                    >
+                        Crear producto
+                    </Button>
+                </NavbarItem>
+            </NavbarContent>
+        </Navbar>
     );
 }
 
