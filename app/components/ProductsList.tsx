@@ -1,5 +1,4 @@
 import NextImage from 'next/image';
-import { Product } from '@/entities/Product';
 import { getPool } from '@/services/getPool';
 import { Image } from '@nextui-org/image';
 import { IncomingProduct, productListAdapter } from '@/ropa/productAdapters';
@@ -20,7 +19,7 @@ async function ProductsList() {
                           <div className='relative w-full aspect-square rounded-xl bg-background-dark border border-border'>
                               <Image
                                   as={NextImage}
-                                  className='rounded-xl'
+                                  className='rounded-xl w-full aspect-square object-cover'
                                   src={product.image || ''}
                                   alt={product.name}
                                   width={500}
