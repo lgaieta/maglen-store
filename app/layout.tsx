@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import '@/global.css';
 import { Poppins } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/(common)/components/Header';
+import Footer from '@/(common)/components/Footer';
 import { Providers } from '@/providers';
 
 const poppins = Poppins({

@@ -1,6 +1,6 @@
 import { Button } from '@nextui-org/button';
 import NextLink from 'next/link';
-import Carousel from '@/components/Carousel';
+import Carousel from '@/(home)/components/Carousel';
 
 function HeroSection() {
     return (

@@ -21,7 +21,5 @@ export const productAdapter = (product: IncomingProduct): Product => ({
     image: productImageAdapter(product.image),
 });
 
-export const productListAdapter = (productList: IncomingProduct[]) => {
-    console.log(productList);
-    return productList.map(productAdapter);
-};
+export const productListAdapter = (productList: IncomingProduct[]) =>
+    productList.map(productAdapter);

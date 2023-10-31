@@ -1,6 +1,6 @@
-import HeroSection from '@/sections/HeroSection';
-import SocialProofSection from '@/sections/SocialProofSection';
-import ProductSection from '@/sections/ProductSection';
+import HeroSection from '@/(home)/sections/HeroSection';
+import SocialProofSection from '@/(home)/sections/SocialProofSection';
+import ProductSection from '@/(home)/sections/ProductSection';
 
 export const metadata = {
     title: 'Inicio - MAGLEN STORE',

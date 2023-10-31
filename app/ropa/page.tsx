@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import ProductsList from '../components/ProductsList';
+import ProductsList from '@/ropa/components/ProductsList';
 import { Spinner } from '@nextui-org/spinner';
 
 export const metadata = {

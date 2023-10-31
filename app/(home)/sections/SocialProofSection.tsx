@@ -1,4 +1,4 @@
-import Review from '@/components/Review';
+import Review from '@/(home)/components/Review';
 import Image from 'next/image';
 
 function SocialProofSection() {

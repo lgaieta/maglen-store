@@ -1,10 +1,10 @@
 'use client';
 
 import { Input } from '@nextui-org/input';
-import SubmitButton from '@/components/SubmitButton';
+import SubmitButton from '@/subir-ropa/components/SubmitButton';
 import { useFormState } from 'react-dom';
-import createProductServerAction from '@/subir-ropa/createProductServerAction';
-import ImageUploader from './ImageUploader';
+import createProductServerAction from '@/subir-ropa/actions/createProductServerAction';
+import ImageUploader from '@/subir-ropa/components/ImageUploader';
 
 export type ProductFromUser = {
     name: string;

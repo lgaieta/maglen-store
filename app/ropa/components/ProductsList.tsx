@@ -1,12 +1,28 @@
 import NextImage from 'next/image';
-import { getPool } from '@/services/getPool';
+import { getPool } from '@/(common)/services/getPool';
 import { Image } from '@nextui-org/image';
-import { IncomingProduct, productListAdapter } from '@/ropa/productAdapters';
+import {
+    IncomingProduct,
+    productListAdapter,
+} from '@/ropa/adapters/productAdapters';
+import { Link } from '@nextui-org/react';
+import NextLink from 'next/link';
 
 async function ProductsList() {
     const products = productListAdapter(
         (await getPool().query('select * from product'))[0] as IncomingProduct[]
     );
+
+    if (products.length === 0)
+        return (
+            <p>
+                No hay productos guardados, presione en{' '}
+                <Link as={NextLink} href='/subir-ropa'>
+                    Subir Ropa
+                </Link>{' '}
+                para guardar el primero.
+            </p>
+        );
 
     return (
         <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 section-width-limits w-full gap-10'>

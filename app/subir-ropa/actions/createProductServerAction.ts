@@ -1,8 +1,8 @@
 'use server';
 
-import { getPool } from '@/services/getPool';
-import { ProductSchema } from './ProductSchema';
-import { ProductFormErrors } from '@/components/ProductForm';
+import { getPool } from '@/(common)/services/getPool';
+import { ProductSchema } from '../ProductSchema';
+import { ProductFormErrors } from '@/subir-ropa/components/ProductForm';
 import { redirect } from 'next/navigation';
 
 const createProductServerAction = async (

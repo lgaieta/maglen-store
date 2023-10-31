@@ -1,4 +1,4 @@
-import ProductForm from '@/components/ProductForm';
+import ProductForm from '@/subir-ropa/components/ProductForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
