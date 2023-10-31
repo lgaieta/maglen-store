@@ -11,7 +11,7 @@ function Header() {
     return (
         <Navbar
             classNames={{
-                base: 'w-full',
+                base: 'w-full border-b border-b-divider',
                 wrapper: 'w-full section-width-limits',
             }}
         >
