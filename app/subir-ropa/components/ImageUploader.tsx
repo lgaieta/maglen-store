@@ -144,11 +144,11 @@ function ImageUploader(props: ImageUploaderProps) {
                                     : ''
                             }
                             alt='Icono de imagen'
-                            width={52}
-                            height={52}
+                            width={300}
+                            height={300}
                             shadow='md'
-                            radius='sm'
-                            className='w-[120px] aspect-square'
+                            radius='lg'
+                            className='w-[300px] aspect-square object-cover'
                         />
                         <Button
                             variant='flat'

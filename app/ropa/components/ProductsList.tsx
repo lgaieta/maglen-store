@@ -8,6 +8,11 @@ import {
 import { Link } from '@nextui-org/react';
 import NextLink from 'next/link';
 
+const ARSFormat = new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+});
+
 async function ProductsList() {
     const products = productListAdapter(
         (await getPool().query('select * from product'))[0] as IncomingProduct[]
@@ -45,7 +50,9 @@ async function ProductsList() {
                           <p className='text-xl font-bold mt-1'>
                               {product.name}
                           </p>
-                          <p className='text-xl'>${product.price}</p>
+                          <p className='text-xl'>
+                              {ARSFormat.format(product.price).slice(0, -3)}
+                          </p>
                       </li>
                   ))
                 : null}
