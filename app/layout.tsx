@@ -7,7 +7,7 @@ import { Providers } from '@/providers';
 
 const poppins = Poppins({
     weight: ['400', '500', '700'],
-    display: 'fallback',
+    display: 'swap',
     subsets: ['latin'],
 });
 

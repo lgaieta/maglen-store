@@ -1,4 +1,4 @@
-import { Product } from '@/entities/Product';
+import { Product } from '@/(common)/entities/Product';
 
 type IncomingImage = Buffer | null;
 

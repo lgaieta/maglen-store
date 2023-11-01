@@ -37,7 +37,7 @@ async function ProductsList() {
                           key={product.id}
                           className='flex flex-col items-center justify-center gap-1'
                       >
-                          <div className='relative w-full aspect-square rounded-xl bg-background-dark border border-border'>
+                          <div className='relative w-full aspect-square rounded-xl bg-content1 border border-divider'>
                               <Image
                                   as={NextImage}
                                   className='rounded-xl w-full aspect-square object-cover'
