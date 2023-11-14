@@ -1,22 +1,21 @@
 'use server';
 
-import { getPool } from '@/(common)/services/getPool';
+import { pool } from '@/(common)/services/pool';
 import { ProductSchema } from '../ProductSchema';
 import { ProductFormErrors } from '@/subir-ropa/components/ProductForm';
 import { redirect } from 'next/navigation';
+import { getDataFromFormData } from '../utils/getDataFromFormData';
 
 const createProductServerAction = async (
     _: { errors: ProductFormErrors },
     formData: FormData
 ) => {
     try {
-        const name = formData.get('name') as string;
-        const price = parseFloat(formData.get('price') as string);
-        const file = formData.get('image') as File;
+        const { name, price, file, sizes } = getDataFromFormData(formData);
 
         const parsedResult = ProductSchema.safeParse({
             name,
-            image: file.size === 0 ? null : file,
+            image: file instanceof File && file.size === 0 ? null : file,
             price,
         });
 
@@ -32,18 +31,16 @@ const createProductServerAction = async (
             return { errors };
         }
 
-        const pool = getPool();
-
-        await pool.query(
-            'INSERT INTO product (name, price, image) VALUES (?, ?, ?)',
-            [
-                parsedResult.data.name,
-                parsedResult.data.price,
-                parsedResult.data.image !== null
-                    ? Buffer.from(await parsedResult.data.image.arrayBuffer())
-                    : null,
-            ]
-        );
+        // await pool.query(
+        //     'INSERT INTO product (name, price, image) VALUES (?, ?, ?)',
+        //     [
+        //         parsedResult.data.name,
+        //         parsedResult.data.price,
+        //         parsedResult.data.image !== null
+        //             ? Buffer.from(await parsedResult.data.image.arrayBuffer())
+        //             : null,
+        //     ]
+        // );
 
         console.log(
             `Saved product with name ${name} and price ${price} successfully`

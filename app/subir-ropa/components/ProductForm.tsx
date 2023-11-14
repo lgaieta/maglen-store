@@ -52,6 +52,9 @@ function ProductForm() {
                 isError={errors?.image !== undefined}
                 errorMessage={errors?.image || null}
             />
+            <input type='checkbox' name='check' value={'salsa'} />
+            <input type='checkbox' name='check' value={'y picante'} />
+            <input type='checkbox' name='check' value={'y nos fuimos'} />
             <SubmitButton />
         </form>
     );
